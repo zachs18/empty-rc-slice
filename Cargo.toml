@@ -1,0 +1,15 @@
+[package]
+name = "empty-rc-slice"
+version = "0.1.0"
+edition = "2021"
+
+
+[features]
+default = ["arc", "rc", "std"]
+arc = ["dep:parking_lot"]
+rc = ["std"]
+std = []
+
+[dependencies.parking_lot]
+version = "0.12.2"
+optional = true
